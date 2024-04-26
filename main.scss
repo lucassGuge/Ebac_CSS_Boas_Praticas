@@ -1,0 +1,61 @@
+@use 'variaveis';
+
+
+body{
+    background-color: variaveis.$cor-primaria;
+}
+
+
+* { 
+    padding: 0;
+    margin:  0;
+}
+
+.container{
+    display: flex;
+    margin: variaveis.$marginAuto;
+    max-width: 1024px;
+    
+}
+
+.produtos{
+    max-width: 960px;
+    width: 100%;
+    margin: variaveis.$marginAuto;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    .produto{
+        padding: 15px;
+        margin: variaveis.$marginAuto;
+        align-items: center;
+        background-color: variaveis.$cor-secundaria;
+        border-radius: 15px;
+
+        &__imagem{
+            width: 200px;
+            height: 200px;
+        }
+        &__nome{
+            font-size: larger;
+            color: variaveis.$corTexto;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+        &__descricao{
+            font-size: medium;
+            color: variaveis.$corTexto2;
+            font-weight: bold;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+        &.em-destaque{
+            background-color: variaveis.$corDestaque;
+
+            
+        }
+    }
+    
+}
